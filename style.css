@@ -1,16 +1,29 @@
-/* Variables de color */
+/* =========================================
+   VARIABLES Y ESTILOS BASE
+   ========================================= */
 :root {
-    --bg-color: #0d0d0d; /* Negro profundo */
-    --text-color: #e0e0e0;
-    --primary-purple: #7a1fa2;
-    --accent-purple: #ab47bc;
-    --dark-purple: #4a148c;
+    --bg-color: #080808; /* Negro casi puro */
+    --bg-alt: #121212;  /* Negro ligeramente más claro */
+    --text-color: #f0f0f0;
+    --text-muted: #a0a0a0;
+    
+    /* Paleta Púrpura Elegant Alternative */
+    --p-primary: #6a1b9a;   /* Púrpura base elegante */
+    --p-accent: #ab47bc;    /* Púrpura brillante para acentos */
+    --p-dark: #310a4a;      /* Púrpura muy oscuro gótico */
+    
+    --transition: all 0.3s ease-in-out;
 }
 
+/* Reseteo básico y Scroll Suave */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -18,188 +31,269 @@ body {
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* Tipografía Profesional */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
 }
 
-/* Header */
+/* Contenedores Universales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-small {
+    max-width: 600px;
+}
+
+/* =========================================
+   COMPONENTES (BOTONES)
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid var(--p-accent);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background-color: var(--p-accent);
+    box-shadow: 0 0 20px rgba(171, 71, 188, 0.4);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* =========================================
+   HEADER & NAV
+   ========================================= */
 header {
-    padding: 2rem 5%;
+    padding: 1.5rem 0;
     text-align: center;
-    border-bottom: 1px solid #222;
+    background-color: transparent;
+    position: absolute; /* Para que el hero empiece desde arriba */
+    width: 100%;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-color);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px rgba(122, 31, 162, 0.5);
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-bottom: 0;
 }
 
-/* Hero Section */
+/* =========================================
+   SECCIÓN HERO (PORTADA PROFESIONAL)
+   ========================================= */
 .hero {
-    height: 70vh;
+    position: relative;
+    height: 100vh; /* Ocupa toda la pantalla */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #fff;
+    /* INTEGRACIÓN DE IMAGEN DE PORTADA */
+    background-image: url('hero-portada.jpg'); /* ASEGÚRATE DE QUE EL NOMBRE COINCIDA */
+    background-size: cover; /* La imagen cubre todo sin deformarse */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+}
+
+/* Capa de degrade sofisticada para legibilidad y profesionalismo */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(0, 0, 0, 0.9) 0%, /* Negro oscuro a la izquierda */
+        rgba(49, 10, 74, 0.8) 50%, /* Degradado púrpura oscuro gótico */
+        rgba(0, 0, 0, 0.95) 100%  /* Casi negro a la derecha */
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Por encima de la capa negra */
     padding: 0 20px;
-    background: radial-gradient(circle at center, var(--dark-purple) 0%, var(--bg-color) 70%);
+    max-width: 800px;
 }
 
 .hero h2 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: #fff;
+    font-size: 4rem; /* Texto potente */
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Botones */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--primary-purple);
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--accent-purple);
-    box-shadow: 0 0 15px var(--accent-purple);
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #e0e0e0;
+    font-weight: 300;
 }
 
 /* =========================================
-   SECCIÓN DE COLECCIÓN (GALERÍA)
+   GALERÍA (LIMPIA Y ESTRUCTURADA)
    ========================================= */
 .gallery-section {
-    padding: 5rem 10%;
+    padding: 8rem 0;
+    background-color: var(--bg-alt);
     text-align: center;
-    background-color: var(--bg-color); 
 }
 
 .gallery-section h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #fff;
     margin-bottom: 0.5rem;
-    color: var(--text-color);
 }
 
-.gallery-section p {
-    margin-bottom: 3rem;
-    color: #888;
+.section-subtitle {
+    margin-bottom: 4rem;
+    color: var(--text-muted);
     font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-/* Cuadrícula adaptable a móviles y PC */
+/* Cuadrícula Adaptable Profesional */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptable */
+    gap: 1.5rem; /* Espaciado moderno y limpio */
 }
 
-/* Contenedor de cada imagen */
+/* Arreglo de las imágenes: Ahora todas serán iguales */
 .gallery-item {
     position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    background-color: #000;
-    border: 1px solid #222;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    overflow: hidden; /* Corta el exceso de imagen */
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
     cursor: pointer;
+    background-color: #000;
 }
 
-/* Estilo de la imagen por defecto */
 .gallery-item img {
     width: 100%;
     height: 100%;
+    /* CLAVE PROFESIONAL: FUERZA UN TAMAÑO CUADRADO UNIFORME */
     aspect-ratio: 1 / 1; 
-    object-fit: cover; 
+    object-fit: cover; /* Evita que la imagen se estire */
     display: block;
-    filter: grayscale(40%) contrast(1.2) brightness(0.8); 
-    transition: filter 0.5s ease, transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.8); /* Look gótico por defecto */
 }
 
 /* Efectos al pasar el mouse por encima (Hover) */
 .gallery-item:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 10px 25px rgba(122, 31, 162, 0.5); 
-    border-color: var(--accent-purple);
+    transform: translateY(-5px); /* Pequeño levante moderno */
+    box-shadow: 0 15px 40px rgba(171, 71, 188, 0.3); /* Resplandor púrpura suave */
 }
 
 .gallery-item:hover img {
-    filter: grayscale(0%) contrast(1) brightness(1); 
-    transform: scale(1.08); 
+    transform: scale(1.1); /* Zoom interno suave */
+    filter: brightness(1.1); /* Se ilumina al interactuar */
+}
+
+/* Overlay sutil para el nombre de la pieza */
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    opacity: 0;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 1px;
 }
 
 /* =========================================
-   SECCIÓN DE CONTACTO
+   CONTACTO (LIMPIO Y UNIFICADO)
    ========================================= */
 .contact-section {
-    padding: 5rem 20px;
+    padding: 8rem 0;
     text-align: center;
-    background-color: #111;
+    background-color: var(--bg-color);
 }
 
 .contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent-purple);
+    font-size: 2.8rem;
+    color: var(--p-accent);
+    margin-bottom: 1.5rem;
 }
 
 .contact-section p {
-    margin-bottom: 2rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 3rem;
+    color: var(--text-muted);
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    gap: 15px;
+    text-align: left;
 }
 
-.contact-form label {
-    text-align: left;
-    font-size: 0.9rem;
-    color: #aaa;
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .contact-form input {
-    padding: 12px;
-    background-color: #000;
-    border: 1px solid #333;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--bg-alt);
+    border: 1px solid #2a2a2a;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 3px;
+    transition: var(--transition);
 }
 
 .contact-form input:focus {
     outline: none;
-    border-color: var(--primary-purple);
-    box-shadow: 0 0 5px var(--dark-purple);
+    border-color: var(--p-accent);
+    box-shadow: 0 0 10px rgba(171, 71, 188, 0.2);
 }
 
 /* =========================================
@@ -207,8 +301,25 @@ header {
    ========================================= */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 0;
     background-color: #050505;
     font-size: 0.8rem;
     color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   MÓVILES (ADAPTACIONES)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .gallery-section {
+        padding: 5rem 0;
+    }
 }
