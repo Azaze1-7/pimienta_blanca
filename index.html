@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pimienta Blanca | Accesorios Alternativos</title>
+    <title>Pimienta Blanca | Elegancia Underground</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -17,46 +17,57 @@
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h2>Elegancia Underground</h2>
-                <p>Gargantillas y accesorios alternativos hechos a mano. Piezas únicas para almas oscuras.</p>
-                <a href="#coleccion" class="btn">Ver Colección</a>
+            <div class="hero-overlay"></div> <div class="hero-content">
+                <h2>Forjamos tu oscuridad</h2>
+                <p>Gargantillas de estilo underground y accesorios alternativos hechos a mano. Piezas únicas para quienes desafían lo establecido.</p>
+                <a href="#coleccion" class="btn">Explorar Colección</a>
             </div>
         </section>
 
         <section id="coleccion" class="gallery-section">
-            <h2>Nuestras Piezas</h2>
-            <p>Forjadas en la oscuridad, diseñadas para destacar.</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="img 1.jpg" alt="Gargantilla alternativa 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="img 2.jpg" alt="Gargantilla alternativa 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="img 3.jpg" alt="Gargantilla alternativa 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="img 4.jpg" alt="Gargantilla alternativa 4">
+            <div class="container">
+                <h2>Nuestras Piezas</h2>
+                <p class="section-subtitle">Exclusividad en cada detalle.</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img 1.jpg" alt="Choker negro con gema azul">
+                        <div class="item-overlay"><p>Mística</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img 2.jpg" alt="Choker lila gótico">
+                        <div class="item-overlay"><p>Lila Gothic</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img 3.jpg" alt="Choker rosa alternativo">
+                        <div class="item-overlay"><p>Dark Pastel</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img 4.jpg" alt="Choker cuero con Ouija">
+                        <div class="item-overlay"><p>Spiritus</p></div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section id="contacto" class="contact-section">
-            <h2>Acceso Exclusivo</h2>
-            <p>Déjanos tu correo para recibir información sobre nuestras próximas colecciones y piezas únicas antes que nadie.</p>
-            
-            <form action="TU_ENLACE_AQUI" method="POST" class="contact-form">
-                <label for="email">Tu Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="alma.oscura@email.com" required>
+            <div class="container container-small">
+                <h2>Acceso Culto</h2>
+                <p>Únete para recibir información exclusiva sobre lanzamientos y piezas de edición limitada antes que nadie.</p>
                 
-                <button type="submit" class="btn">Únete al culto</button>
-            </form>
+                <form action="TU_ENLACE_AQUI" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Tu Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="alma.oscura@email.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-full">Unirme</button>
+                </form>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 Pimienta Blanca. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Pimienta Blanca. Forjado en México.</p>
     </footer>
 
 </body>
