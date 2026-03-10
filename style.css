@@ -1,0 +1,147 @@
+/* Variables de color */
+:root {
+    --bg-color: #0d0d0d; /* Negro profundo */
+    --text-color: #e0e0e0;
+    --primary-purple: #7a1fa2;
+    --accent-purple: #ab47bc;
+    --dark-purple: #4a148c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Header */
+header {
+    padding: 2rem 5%;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(122, 31, 162, 0.5);
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: radial-gradient(circle at center, var(--dark-purple) 0%, var(--bg-color) 70%);
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-purple);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-purple);
+    box-shadow: 0 0 15px var(--accent-purple);
+}
+
+/* Sección de Contacto */
+.contact-section {
+    padding: 5rem 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-purple);
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.contact-form input {
+    padding: 12px;
+    background-color: #000;
+    border: 1px solid #333;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 3px;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 5px var(--dark-purple);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #050505;
+    font-size: 0.8rem;
+    color: #666;
+}
