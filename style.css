@@ -88,7 +88,72 @@ header {
     box-shadow: 0 0 15px var(--accent-purple);
 }
 
-/* Sección de Contacto */
+/* =========================================
+   SECCIÓN DE COLECCIÓN (GALERÍA)
+   ========================================= */
+.gallery-section {
+    padding: 5rem 10%;
+    text-align: center;
+    background-color: var(--bg-color); 
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.gallery-section p {
+    margin-bottom: 3rem;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* Cuadrícula adaptable a móviles y PC */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Contenedor de cada imagen */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #000;
+    border: 1px solid #222;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: pointer;
+}
+
+/* Estilo de la imagen por defecto */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    display: block;
+    filter: grayscale(40%) contrast(1.2) brightness(0.8); 
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Efectos al pasar el mouse por encima (Hover) */
+.gallery-item:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 25px rgba(122, 31, 162, 0.5); 
+    border-color: var(--accent-purple);
+}
+
+.gallery-item:hover img {
+    filter: grayscale(0%) contrast(1) brightness(1); 
+    transform: scale(1.08); 
+}
+
+/* =========================================
+   SECCIÓN DE CONTACTO
+   ========================================= */
 .contact-section {
     padding: 5rem 20px;
     text-align: center;
@@ -137,7 +202,9 @@ header {
     box-shadow: 0 0 5px var(--dark-purple);
 }
 
-/* Footer */
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
     text-align: center;
     padding: 2rem;
