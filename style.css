@@ -2,15 +2,15 @@
    VARIABLES Y ESTILOS BASE
    ========================================= */
 :root {
-    --bg-color: #080808; /* Negro casi puro */
-    --bg-alt: #121212;  /* Negro ligeramente más claro */
+    --bg-color: #080808; 
+    --bg-alt: #121212;  
     --text-color: #f0f0f0;
     --text-muted: #a0a0a0;
     
     /* Paleta Púrpura Elegant Alternative */
-    --p-primary: #6a1b9a;   /* Púrpura base elegante */
-    --p-accent: #ab47bc;    /* Púrpura brillante para acentos */
-    --p-dark: #310a4a;      /* Púrpura muy oscuro gótico */
+    --p-primary: #6a1b9a;   
+    --p-accent: #ab47bc;    
+    --p-dark: #310a4a;      
     
     --transition: all 0.3s ease-in-out;
 }
@@ -88,7 +88,7 @@ header {
     padding: 1.5rem 0;
     text-align: center;
     background-color: transparent;
-    position: absolute; /* Para que el hero empiece desde arriba */
+    position: absolute; 
     width: 100%;
     z-index: 10;
 }
@@ -107,16 +107,16 @@ header {
    ========================================= */
 .hero {
     position: relative;
-    height: 100vh; /* Ocupa toda la pantalla */
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
-    /* INTEGRACIÓN DE IMAGEN DE PORTADA */
-    background-image: url('hero-portada.jpg'); /* ASEGÚRATE DE QUE EL NOMBRE COINCIDA */
-    background-size: cover; /* La imagen cubre todo sin deformarse */
-    background-position: center; /* Centra la imagen */
+    /* INTEGRACIÓN DEL ENLACE DE IMAGEN QUE ME PASASTE */
+    background-image: url('https://imgs.search.brave.com/aRfWi2tBabG3Hfoy5_QLEkgcOWvqxujMqLptNcPc0kg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzM0MjgyNzk3L2Mv/OTk3Lzk5Ny82NjAv/OTg1L2lsL2ZhNzc5/My80MTU5NzYyNTcx/L2lsXzYwMHg2MDAu/NDE1OTc2MjU3MV90/dDhrLmpwZw'); 
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
 }
 
@@ -129,22 +129,22 @@ header {
     height: 100%;
     background: linear-gradient(
         135deg, 
-        rgba(0, 0, 0, 0.9) 0%, /* Negro oscuro a la izquierda */
-        rgba(49, 10, 74, 0.8) 50%, /* Degradado púrpura oscuro gótico */
-        rgba(0, 0, 0, 0.95) 100%  /* Casi negro a la derecha */
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(49, 10, 74, 0.8) 50%, 
+        rgba(0, 0, 0, 0.95) 100%  
     );
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Por encima de la capa negra */
+    z-index: 2; 
     padding: 0 20px;
     max-width: 800px;
 }
 
 .hero h2 {
-    font-size: 4rem; /* Texto potente */
+    font-size: 4rem; 
     margin-bottom: 1.5rem;
     line-height: 1.1;
 }
@@ -182,14 +182,14 @@ header {
 /* Cuadrícula Adaptable Profesional */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptable */
-    gap: 1.5rem; /* Espaciado moderno y limpio */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 1.5rem; 
 }
 
 /* Arreglo de las imágenes: Ahora todas serán iguales */
 .gallery-item {
     position: relative;
-    overflow: hidden; /* Corta el exceso de imagen */
+    overflow: hidden; 
     border-radius: 2px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: var(--transition);
@@ -200,23 +200,22 @@ header {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    /* CLAVE PROFESIONAL: FUERZA UN TAMAÑO CUADRADO UNIFORME */
     aspect-ratio: 1 / 1; 
-    object-fit: cover; /* Evita que la imagen se estire */
+    object-fit: cover; 
     display: block;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    filter: brightness(0.8); /* Look gótico por defecto */
+    filter: brightness(0.8); 
 }
 
 /* Efectos al pasar el mouse por encima (Hover) */
 .gallery-item:hover {
-    transform: translateY(-5px); /* Pequeño levante moderno */
-    box-shadow: 0 15px 40px rgba(171, 71, 188, 0.3); /* Resplandor púrpura suave */
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(171, 71, 188, 0.3); 
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1); /* Zoom interno suave */
-    filter: brightness(1.1); /* Se ilumina al interactuar */
+    transform: scale(1.1); 
+    filter: brightness(1.1); 
 }
 
 /* Overlay sutil para el nombre de la pieza */
