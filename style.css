@@ -2,17 +2,17 @@
    VARIABLES Y ESTILOS BASE
    ========================================= */
 :root {
-    --bg-color: #080808; 
-    --bg-alt: #121212;  
-    --text-color: #f0f0f0;
-    --text-muted: #a0a0a0;
+    --bg-color: #050505; /* Negro puro para máximo profesionalismo */
+    --bg-alt: #101010;  /* Negro ligeramente más claro */
+    --text-color: #f5f5f5;
+    --text-muted: #909090;
     
     /* Paleta Púrpura Elegant Alternative */
     --p-primary: #6a1b9a;   
     --p-accent: #ab47bc;    
-    --p-dark: #310a4a;      
+    --p-dark: #2a0a40;      
     
-    --transition: all 0.3s ease-in-out;
+    --transition: all 0.4s ease-in-out;
 }
 
 /* Reseteo básico y Scroll Suave */
@@ -46,7 +46,7 @@ h1, h2, h3 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 .container-small {
@@ -58,7 +58,7 @@ h1, h2, h3 {
    ========================================= */
 .btn {
     display: inline-block;
-    padding: 14px 35px;
+    padding: 15px 40px;
     background-color: transparent;
     color: #fff;
     border: 2px solid var(--p-accent);
@@ -85,7 +85,7 @@ h1, h2, h3 {
    HEADER & NAV
    ========================================= */
 header {
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     text-align: center;
     background-color: transparent;
     position: absolute; 
@@ -94,16 +94,16 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--text-color);
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     font-weight: 400;
     margin-bottom: 0;
 }
 
 /* =========================================
-   SECCIÓN HERO (PORTADA PROFESIONAL)
+   SECCIÓN 1: HERO (PORTADA PROFESIONAL SOLUCIONADA)
    ========================================= */
 .hero {
     position: relative;
@@ -113,11 +113,12 @@ header {
     align-items: center;
     text-align: center;
     color: #fff;
-    /* INTEGRACIÓN DEL ENLACE DE IMAGEN QUE ME PASASTE */
-    background-image: url('https://imgs.search.brave.com/aRfWi2tBabG3Hfoy5_QLEkgcOWvqxujMqLptNcPc0kg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzM0MjgyNzk3L2Mv/OTk3Lzk5Ny82NjAv/OTg1L2lsL2ZhNzc5/My80MTU5NzYyNTcx/L2lsXzYwMHg2MDAu/NDE1OTc2MjU3MV90/dDhrLmpwZw'); 
+    /* INTEGRACIÓN DE LA NUEVA IMAGEN DE PORTADA EXCLUSIVA */
+    background-image: url('hero-final.jpg'); /* EL NOMBRE EXACTO */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Efecto parallax suave */
 }
 
 /* Capa de degrade sofisticada para legibilidad y profesionalismo */
@@ -129,8 +130,8 @@ header {
     height: 100%;
     background: linear-gradient(
         135deg, 
-        rgba(0, 0, 0, 0.9) 0%, 
-        rgba(49, 10, 74, 0.8) 50%, 
+        rgba(0, 0, 0, 0.95) 0%, 
+        rgba(42, 10, 64, 0.85) 50%, 
         rgba(0, 0, 0, 0.95) 100%  
     );
     z-index: 1;
@@ -151,18 +152,97 @@ header {
 
 .hero p {
     font-size: 1.3rem;
-    margin-bottom: 2.5rem;
-    color: #e0e0e0;
+    margin-bottom: 3rem;
+    color: #f0f0f0;
     font-weight: 300;
 }
 
 /* =========================================
-   GALERÍA (LIMPIA Y ESTRUCTURADA)
+   SECCIÓN 2: PILARES (ESTILOS LIMPIOS)
+   ========================================= */
+.pillars-section {
+    padding: 5rem 0;
+    background-color: var(--bg-alt);
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.pillar-item {
+    transition: var(--transition);
+    padding: 20px;
+}
+
+.pillar-item:hover {
+    transform: translateY(-5px);
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+    color: var(--p-accent);
+    margin-bottom: 1.5rem;
+}
+
+.pillar-item h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pillar-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   SECCIÓN 3: ESENCIA (ABUT US ESTILIZADO)
+   ========================================= */
+.essence-section {
+    padding: 10rem 0;
+    background-color: var(--bg-color);
+}
+
+.essence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 5rem;
+    align-items: center;
+}
+
+.essence-text h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.essence-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.essence-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    filter: brightness(0.8);
+}
+
+/* =========================================
+   SECCIÓN 4: GALERÍA (MANTENIENDO ESTILOS PROFESIONALES)
    ========================================= */
 .gallery-section {
     padding: 8rem 0;
     background-color: var(--bg-alt);
     text-align: center;
+    border-top: 1px solid #1a1a1a;
 }
 
 .gallery-section h2 {
@@ -172,7 +252,7 @@ header {
 }
 
 .section-subtitle {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     color: var(--text-muted);
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -191,7 +271,7 @@ header {
     position: relative;
     overflow: hidden; 
     border-radius: 2px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     transition: var(--transition);
     cursor: pointer;
     background-color: #000;
@@ -243,22 +323,22 @@ header {
 }
 
 /* =========================================
-   CONTACTO (LIMPIO Y UNIFICADO)
+   SECCIÓN 5: CONTACTO (UNIFICADO)
    ========================================= */
 .contact-section {
-    padding: 8rem 0;
+    padding: 10rem 0;
     text-align: center;
     background-color: var(--bg-color);
 }
 
 .contact-section h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--p-accent);
     margin-bottom: 1.5rem;
 }
 
 .contact-section p {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     color: var(--text-muted);
 }
 
@@ -272,40 +352,59 @@ header {
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 0.85rem;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 
 .contact-form input {
     width: 100%;
-    padding: 16px;
+    padding: 18px;
     background-color: var(--bg-alt);
     border: 1px solid #2a2a2a;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     transition: var(--transition);
+    border-radius: 2px;
 }
 
 .contact-form input:focus {
     outline: none;
     border-color: var(--p-accent);
-    box-shadow: 0 0 10px rgba(171, 71, 188, 0.2);
+    box-shadow: 0 0 10px rgba(171, 71, 188, 0.1);
 }
 
 /* =========================================
-   FOOTER
+   FOOTER (REDES SOCIALES ESTILIZADAS)
    ========================================= */
 footer {
     text-align: center;
-    padding: 3rem 0;
-    background-color: #050505;
+    padding: 5rem 0;
+    background-color: var(--bg-alt);
     font-size: 0.8rem;
     color: #666;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #666;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: var(--p-accent);
+    transform: scale(1.1);
 }
 
 /* =========================================
@@ -318,7 +417,10 @@ footer {
     .hero p {
         font-size: 1.1rem;
     }
-    .gallery-section {
+    .essence-section, .contact-section {
         padding: 5rem 0;
+    }
+    .essence-grid {
+        gap: 3rem;
     }
 }
